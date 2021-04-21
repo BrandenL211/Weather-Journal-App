@@ -16,8 +16,9 @@ function performAction(e) {
     getWeather(baseURL, newZip, apiKey) 
 
     .then(function (data) {
+      let  temps = data.main.temp;
         postData('/addWeather', {temps:data.main.temp, date:newDate, feelings:feels})
-
+     
         updateUI()
     })
 }
