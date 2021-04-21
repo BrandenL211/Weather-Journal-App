@@ -38,7 +38,8 @@ function addWeather(req, res) {
         date: req.body.date,
         feelings: req.body.feelings
     }
-    projectData.push(newEntry);
+//    projectData.push(newEntry);
+    projectData = newEntry;
     res.send(projectData);
     console.log(projectData);
 }
