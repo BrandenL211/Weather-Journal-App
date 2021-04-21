@@ -33,20 +33,21 @@ function listening() {
 app.post('/addWeather', addWeather);
 
 function addWeather(req, res) {
+  
     newEntry = {
         temps: req.body.temps,
         date: req.body.date,
         feelings: req.body.feelings
     }
-//    projectData.push(newEntry);
+   
     projectData = newEntry;
     res.send(projectData);
     console.log(projectData);
 }
-/*
+
 app.get('/all', getData);
 
 function getData(req, res) {
     res.send(projectData);
     console.log(projectData);
-}*/
+}
